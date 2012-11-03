@@ -1,0 +1,16 @@
+<plugin>
+   <nom>Larma</nom>
+	<auteur>[Joseh->http://contrib.spip.net/Joseph]</auteur>
+   <version>1.0.0</version>
+	<licence>Creative Commons Attribution 2.5</licence>
+	<slogan>Un theme responsive</slogan>
+	<description></description>
+	<lien></lien>
+	<icon></icon>
+   <etat>dev</etat>
+   <prefix>theme_larma</prefix>
+	<necessite id="SPIP" version="[2.0.10;3.0.99]" />
+	<utilise id="Z" version="[1.7.0;1.9.*]" />
+	<bandeau>images/header-photo.jpg</bandeau>
+	<categorie>theme</categorie>
+</plugin>
