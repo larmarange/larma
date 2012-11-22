@@ -3,8 +3,9 @@
 		<INCLURE{fond=inclure/entete,env}>
 	</div>
 	<div id="barrenav">
-		<label for="toggle-barrenav" data-icon="≡" title="menu" role="navigation" onclick="" id="label-toggle-barrenav"></label>
+		<label for="toggle-barrenav" title="<:theme_larma:afficher_menu:>" role="navigation" onclick="" id="label-toggle-barrenav"></label>
 		<input type="checkbox" id="toggle-barrenav">
+		#FORMULAIRE_RECHERCHE
 		<INCLURE{fond=inclure/barre-nav,env}>
 		<br style="clear: both;"/>
 	</div>
@@ -23,7 +24,9 @@
 			<INCLURE{fond=extra/#ENV{type},env}>
 		</div>
 	</div>
-
+	<div id="retour_haut">
+		<a href="#" title="<:theme_larma:retour_haut_page:>"><img src="#CHEMIN{img/arrow.png}" alt="<:theme_larma:retour_haut_page:>"></a>
+	</div>
 	<div id="pied">
 		<INCLURE{fond=inclure/pied,env}>
 		<INCLURE{fond=inc-theme-copyleft}>
