@@ -520,7 +520,7 @@ table.spip td { vertical-align: top; }
 
 /* Formulaires */
 
-#content .formulaire_spip {border: solid 5px #BBB; background-color: #EEE; padding: 10px;}
+#content .formulaire_spip {border: solid 5px #DDD; background-color: #EEE; padding: 10px;}
 #content .formulaire_spip legend {background-color: transparent;}
 #content .formulaire_spip input.submit {border-style: solid; border-width: 4px; padding: 5px; color: #FFF;}
 #content .formulaire_spip input.submit:hover {border-color:#BBB;}
