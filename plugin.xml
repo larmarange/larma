@@ -6,7 +6,7 @@
 	<slogan>Un theme responsive</slogan>
 	<description></description>
 	<lien>https://github.com/larmarange/larma</lien>
-	<icon></icon>
+	<icon>vignette.jpg</icon>
    <etat>dev</etat>
    <prefix>theme_larma</prefix>
 	<necessite id="SPIP" version="[2.0.10;3.0.99]" />
