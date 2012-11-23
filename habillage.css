@@ -151,13 +151,37 @@ code, .spip_code, .spip_cadre, kbd, samp, var, .formulaire_spip fieldset.previsu
 	{border-top-color: #36a786; border-bottom-color: #36a786; 
 	border-left-color: #36a786; border-right-color: #36a786;}
 table.spip th, table.spip td {border: 1px solid #36a786;}
-.info-publi {color: #A98D76;}
 
-#nom_site_spip a {color: #FFF;}
-#pied {background: #EEE; border-top-color: #BBB;} 
 #barrenav li:hover, li.sfHover, table.spip tr.row_first, #content p.pagination a:hover,
 #content p.pagination strong, #content .formulaire_spip input.submit:hover, .me > .comment > .comment-content
 	{background-color: #b4ded2;}
+
+.info-publi {color: #A98D76;}
+
+#content input:focus,
+#content button:focus,
+#content a.button:focus,
+#content select:focus,
+#content textarea:focus {
+  -webkit-box-shadow: #36a786 0 0 10px 0;
+  -moz-box-shadow: #36a786 0 0 10px 0;
+  box-shadow: #36a786 0 0 10px 0;
+  z-index: 1;
+}
+
+#header input:focus,
+#header button:focus,
+#header a.button:focus,
+#header select:focus,
+#header textarea:focus {
+  -webkit-box-shadow: #ffffff 0 0 10px 0;
+  -moz-box-shadow: #ffffff 0 0 10px 0;
+  box-shadow: #ffffff 0 0 10px 0;
+  z-index: 1;
+}
+
+#nom_site_spip a {color: #FFF;}
+#pied {background: #EEE; border-top-color: #BBB;} 
 #barrenav li:hover a, li.sfHover a, #content p.pagination a:hover,
 #content p.pagination strong, #content .formulaire_spip input.submit:hover
 	{color: #666;}
@@ -207,19 +231,46 @@ a:hover {text-decoration: underline;}
 /* Header */
 
 #entete {padding: 10px; text-align: center;}
-#entete img {max-width: 150px; padding: 10px; background-color: white; float: none; border: none;}
+#entete img {max-width: 150px; padding: 10px; background-color: white; float: none; border: none; margin: 0;}
 #nom_site_spip {font-size: 2.5em; font-weight: normal; display: block;}
 #nom_site_spip a {text-decoration: none; border: none;}
+
+#formulaire_menu_lang {padding: 10px;}
+#formulaire_menu_lang label {color: #FFF; font-weight: normal;}
+#formulaire_menu_lang select {height: auto; width: 100%; color: #888;} 
 
 @media (max-width: 950px) {
 	#entete img {float: left; max-height: 100px; width: auto; max-width: none;}
 	#barrenav {clear: both;}
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 	#entete img {float: none; max-width: 100px; height: auto; max-height: none;}
+	.contenu-principal .cartouche .spip_logos {max-width: 25%;}
 }
 
-/* Menu barrenav */
+/* Menu barrenav + recherche */
+
+#header div, #header p {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	-o-hyphens: none;
+	hyphens: none;
+}
+
+#header #formulaire_recherche {text-align: center; padding: 10px; position:relative;}
+#header #formulaire_recherche label {display: none;}
+#header #formulaire_recherche input[type="text"] {
+	background-image: none; 
+	padding: 5px; padding-right: 25px;
+	width: 100%; height: auto;
+}
+#header #formulaire_recherche input[type="submit"] {
+	position: absolute; right: 15px; top:0px; height: 100%; width: 24px;
+	background-color: transparent; background-image: url('img/search.png');
+	background-position: center center; background-repeat: no-repeat;
+	border: none; cursor: pointer; text-indent:-5000px;
+}
 
 #barrenav ul {list-style: none; padding: 10px; margin: 0;}
 #barrenav ul li {margin: 0; padding:0; background-color: #FFF;}
@@ -316,6 +367,12 @@ a:hover {text-decoration: underline;}
 }
 
 @media (min-width: 700px) and (max-width: 950px) {
+	#formulaire_menu_lang {text-align: right; padding: 0 10px;}
+	#formulaire_menu_lang label {display: inline;}
+	#formulaire_menu_lang select {display: inline-block; width: 180px;}
+	#header #formulaire_recherche {width: 200px; position: absolute; right: 0;}
+	#header #formulaire_recherche input {border-bottom: none;}
+	#barrenav div.menu-conteneur {margin-right: 200px;}
 	#barrenav div.menu-conteneur > ul.menu-liste > li {
 		float: left;
 		border-right-style: none;
@@ -382,8 +439,8 @@ a:hover {text-decoration: underline;}
 		background-image: url('img/menu.png');
 		background-repeat: no-repeat;
 	}
-	#barrenav #toggle-barrenav:checked + .menu-conteneur {display: block;	}
-	#barrenav .menu-conteneur {display: none;}
+	#barrenav #toggle-barrenav:checked + #toggle-div {display: block;	}
+	#barrenav #toggle-div {display: none;}
 }
 
 /* Contenu */
@@ -440,6 +497,7 @@ table.spip td { vertical-align: top; }
 
 #content ul.liste-items {list-style-type: none; padding:0;}
 #content li.item {padding: 5px 0;}
+#content ul.liste-noisettes li.noisette {padding-left: 30px;} /* Pour le noizetier, voir=noisettes */
 #content li.item h3 {margin-bottom: 5px; padding-top: 10px; margin-top: 10px; border-top: #EEE solid 1px; line-height: 1.5em;}
 #content li.item:first-child h3 {border-top: none; margin-top: 0; padding-top: 10px;}
 #content li.item .info-publi {font-size: 90%; margin-bottom: 10px;}
@@ -470,10 +528,12 @@ table.spip td { vertical-align: top; }
 #content .formulaire_spip {margin-bottom: 20px;}
 .formulaire_login .spip_logos {padding: 0;}
 
+
 /* Forum */
 ul.comments-ul {list-style: none; padding:0; margin: 0;}
 div.comments > ul.forum > li {border: solid 1px #BBB; margin-bottom: 10px}
 div.comments > ul.forum > li li {border-top: solid 1px #BBB;}
+div.comments > ul.forum > li .formulaire_spip li {border-top: none;}
 div.comments > ul.forum > li .previsu li {border: none;}
 ul.forum .spip_logos {float: none; padding: 5px;}
 .comment-meta {display: table-cell; width: 25%; background-color: #DDD; padding: 10px; text-align: center;}

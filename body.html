@@ -5,8 +5,9 @@
 	<div id="barrenav">
 		<label for="toggle-barrenav" title="<:theme_larma:afficher_menu:>" role="navigation" onclick="" id="label-toggle-barrenav"></label>
 		<input type="checkbox" id="toggle-barrenav">
-		#FORMULAIRE_RECHERCHE
-		<INCLURE{fond=inclure/barre-nav,env}>
+		<div id="toggle-div">
+			<INCLURE{fond=inclure/barre-nav,env}>
+		</div>
 		<br style="clear: both;"/>
 	</div>
 </div>
@@ -37,5 +38,9 @@
 <script type="text/javascript">/* <![CDATA[ */
     jQuery(document).ready(function(){ 
         jQuery("#barrenav div.menu-conteneur > ul.menu-liste").superfish(); 
+        jQuery("#formulaire_menu_lang").prependTo("#toggle-div");
+        jQuery("#formulaire_recherche").prependTo("#toggle-div");
+        jQuery("#formulaire_recherche input#recherche").attr('placeholder',"<:info_rechercher:>");
+        jQuery(".noisette_formulaire_recherche").remove();
     }); 
 /* ]]> */</script>
