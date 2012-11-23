@@ -258,7 +258,7 @@ a:hover {text-decoration: underline;}
 
 #formulaire_recherche {text-align: center; padding: 10px; position:relative;}
 #formulaire_recherche label {display: none;}
-#formulaire_recherche input[type="text"] {
+.formulaire_recherche input.text {
 	background-image: none; 
 	padding: 5px; padding-right: 25px;
 	width: 100%; height: auto;
