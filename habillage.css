@@ -197,15 +197,15 @@ body {margin: 0; padding: 0; text-align: justify;}
 	left:0;
 }
 #content {margin-left:250px;}
-#contenu {display: table-cell; padding: 0 10px; width: 700px;}
+#contenu {display: table-cell; padding: 0 75px 0 25px; width: 800px;}
 #side {display: table-cell; width: 250px; padding: 0 10px;}
-#pied, #retour_haut {width: 940px; margin: 10px 10px 0 10px;}
+#pied, #retour_haut {width: 1025px; margin: 10px 10px 0 25px;}
 
 @media (min-width: 950px) and (max-width: 1250px) {
 	#header {width: 200px;}
 	#side {width: 200px;}
 	#content {margin-left: 200px;}
-	#contenu {width: 75%;}
+	#contenu {width: 75%; padding: 0 25px;}
 	#side {width:25%;}
 	#pied, #retour_haut {width: auto;}
 }
@@ -213,10 +213,11 @@ body {margin: 0; padding: 0; text-align: justify;}
 @media (max-width: 950px) {
 	#header {position: relative; width:100%;}
 	#content {margin-left: 0; width:100%;}
+	#contenu {padding: 0 10px}
 	#pied, #retour_haut {width: 100%; margin: 10px 0 0 0;}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 	#contenu {display: block; width: 100%;}
 	#side {display: block; width: 100%;}
 }
@@ -311,7 +312,7 @@ a:hover {text-decoration: underline;}
 #label-toggle-barrenav, #toggle-barrenav {cursor: pointer;}
 #label-toggle-barrenav + #toggle-barrenav { display: none; }
 
-@media (min-width: 700px) {
+@media (min-width: 750px) {
 	.sf-sub-indicator {float: right; font-size: 1.5em;}
 	#barrenav div.menu-conteneur > ul.sf-js-enabled li ul a,
 	#barrenav div.menu-conteneur > ul.sf-js-enabled li ul ul a,
@@ -364,7 +365,7 @@ a:hover {text-decoration: underline;}
 	}
 }
 
-@media (min-width: 700px) and (max-width: 950px) {
+@media (min-width: 750px) and (max-width: 950px) {
 	#formulaire_menu_lang {text-align: right; padding: 0 10px;}
 	#formulaire_menu_lang label {display: inline;}
 	#formulaire_menu_lang select {display: inline-block; width: 180px;}
@@ -425,7 +426,7 @@ a:hover {text-decoration: underline;}
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 	.sf-sub-indicator {display: none;}
 	#barrenav ul, #barrenav li  {display: block;}
 	#label-toggle-barrenav {
