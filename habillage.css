@@ -140,18 +140,18 @@ code, .spip_code, .spip_cadre, kbd, samp, var
 	{font-family: "Source Code Pro", "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;}
 
 /* Couleurs */
-#header, #content .formulaire_spip input.submit
+#header, #content .formulaire_spip input.submit, #content .modererforum button.submit, .comment:hover > .modererforum
 	{background-color: #36a786;} 
 h1, .h1, a, p.soustitre, a.spip_in, a.spip_out, a.spip_url, a.spip_glossaire,
 code, .spip_code, .spip_cadre, kbd, samp, var, .formulaire_spip fieldset.previsu legend
 	{color: #36a786;}
-#barrenav li, blockquote, blockquote.spip, #content .formulaire_spip input.submit, .formulaire_spip fieldset.previsu
+#barrenav li, blockquote, blockquote.spip, #content .formulaire_spip input.submit, #content .modererforum button.submit, .formulaire_spip fieldset.previsu
 	{border-top-color: #36a786; border-bottom-color: #36a786; 
 	border-left-color: #36a786; border-right-color: #36a786;}
 table.spip th, table.spip td {border: 1px solid #36a786;}
 
 #barrenav li:hover, li.sfHover, table.spip tr.row_first, #content p.pagination a:hover,
-#content p.pagination strong, #content .formulaire_spip input.submit:hover, .me > .comment > .comment-content
+#content p.pagination strong, #content .formulaire_spip input.submit:hover, #content .modererforum button.submit:hover, .me > .comment > .comment-content
 	{background-color: #b4ded2;}
 
 .info-publi {color: #A98D76;}
@@ -181,7 +181,7 @@ table.spip th, table.spip td {border: 1px solid #36a786;}
 #nom_site_spip a {color: #FFF;}
 #pied {background: #EEE; border-top-color: #BBB;} 
 #barrenav li:hover a, li.sfHover a, #content p.pagination a:hover,
-#content p.pagination strong, #content .formulaire_spip input.submit:hover
+#content p.pagination strong, #content .formulaire_spip input.submit:hover, #content .modererforum button.submit:hover
 	{color: #666;}
 table.spip tr.row_odd { background: #FFF; }
 table.spip tr.row_even { background: #EEE; }
@@ -465,6 +465,8 @@ abbr.dtreviewed {border:none;}
 a[hreflang]:after{content: " ("attr(hreflang)")";}
 a[href^="mailto:"]:after {content: url(img/mail_link.gif);}
 a.spip_out:after {content: url(img/external_link.gif);}
+#pied a[href^="mailto:"]:after {content: "";}
+#pied a.spip_out:after {content: "";}
 a[hreflang].spip_out:after{content: " ("attr(hreflang)")"url(img/external_link.gif);}
 .spip_cadre {width: 100%; border: solid 4px #BBB; background-color: #EEE; padding: 5px;}
 .spip_cadre:hover {color:#666;}
@@ -519,8 +521,12 @@ table.spip td { vertical-align: top; }
 
 #content .formulaire_spip {border: solid 5px #DDD; background-color: #EEE; padding: 10px;}
 #content .formulaire_spip legend {background-color: transparent;}
-#content .formulaire_spip input.submit {border-style: solid; border-width: 4px; padding: 5px; color: #FFF;}
-#content .formulaire_spip input.submit:hover {border-color:#BBB;}
+#content .formulaire_spip input.submit, #content .modererforum button.submit
+	{border-style: solid; border-width: 4px; padding: 5px; color: #FFF; background-image: none;
+	-webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0;
+	text-shadow: none;}
+#content .formulaire_spip input.submit:hover, #content .modererforum button.submit:hover
+	{border-color:#BBB;}
 #content .formulaire_spip textarea  {width: 100%;}
 #content .formulaire_spip {margin-bottom: 20px;}
 .formulaire_login .spip_logos {padding: 0;}
@@ -532,7 +538,7 @@ div.comments > ul.forum > li {border: solid 1px #BBB; margin-bottom: 10px}
 div.comments > ul.forum > li li {border-top: solid 1px #BBB;}
 div.comments > ul.forum > li .formulaire_spip li {border-top: none;}
 div.comments > ul.forum > li .previsu li {border: none;}
-ul.forum .spip_logos {float: none; padding: 5px;}
+ul.forum .spip_logos {float: none; padding: 5px; }
 .comment-meta {display: table-cell; width: 25%; background-color: #DDD; padding: 10px; text-align: center;}
 .comment-meta .permalink {float: left; color: #666;}
 .comment-meta .in-reply-to {display: none;}
@@ -540,6 +546,10 @@ ul.forum .spip_logos {float: none; padding: 5px;}
 div.comments > ul.forum li .comment-content li {border: none;}
 #content ul.comments-ul .formulaire_spip {margin-bottom: 0;}
 p.comment-reply {text-align: right; margin-top: 20px;}
+.modererforum {display:none;} /* afficher les boutons seulement au survol */
+.comment:hover > .modererforum {display: block; text-align: left; padding-left: 25%; text-align: right;}
+.modererforum form {display: inline-block;}
+.modererforum form button {margin-left: 10px;}
 
 /* Pied de page */
 
