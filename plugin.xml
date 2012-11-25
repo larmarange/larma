@@ -11,6 +11,5 @@
    <prefix>theme_larma_red</prefix>
 	<necessite id="SPIP" version="[2.0.10;3.0.99]" />
 	<utilise id="Z" version="[1.7.0;1.9.*]" />
-	<bandeau>images/header-photo.jpg</bandeau>
 	<categorie>theme</categorie>
 </plugin>
