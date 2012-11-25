@@ -495,15 +495,14 @@ table.spip td { vertical-align: top; }
 
 /* Listes */
 
-#content ul.liste-items {list-style-type: none; padding:0;}
+#content ul.liste-items {list-style-type: none; padding:0; text-align: left;}
 #content li.item {padding: 5px 0;}
 #content ul.liste-noisettes li.noisette {padding-left: 30px;} /* Pour le noizetier, voir=noisettes */
 #content li.item h3 {margin-bottom: 5px; padding-top: 10px; margin-top: 10px; border-top: #EEE solid 1px; line-height: 1.5em;}
 #content li.item:first-child h3 {border-top: none; margin-top: 0; padding-top: 10px;}
 #content li.item .info-publi {font-size: 90%; margin-bottom: 10px;}
-#content li.item .meta-publi {
-	font-size: 90%;
-}
+#content li.item .entry-content {text-align: justify;}
+#content li.item .meta-publi {font-size: 90%;}
 #content li.item .meta-publi .sep {color: #DDD; padding: 0 10px; font-size: 200%;}
 #content p.pagination {text-align: right; margin: 0;}
 #content p.pagination .sep {display: none;}
@@ -531,6 +530,7 @@ table.spip td { vertical-align: top; }
 #content .formulaire_spip textarea  {width: 100%;}
 #content .formulaire_spip {margin-bottom: 20px;}
 .formulaire_login .spip_logos {padding: 0;}
+li.fieldset {padding: 10px; border: dotted 2px #BBB;}
 
 
 /* Forum */
@@ -539,7 +539,7 @@ div.comments > ul.forum > li {border: solid 1px #BBB; margin-bottom: 10px}
 div.comments > ul.forum > li li {border-top: solid 1px #BBB;}
 div.comments > ul.forum > li .formulaire_spip li {border-top: none;}
 div.comments > ul.forum > li .previsu li {border: none;}
-ul.forum .spip_logos {float: none; padding: 5px; }
+ul.forum .spip_logos {float: none; padding: 1px; }
 .comment-meta {display: table-cell; width: 25%; background-color: #DDD; padding: 10px; text-align: center;}
 .comment-meta .permalink {float: left; color: #666;}
 .comment-meta .in-reply-to {display: none;}
