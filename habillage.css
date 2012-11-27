@@ -6,7 +6,7 @@ html {
 body {
 	background-color: #fff;
 	color: #000;
-	font-size: 1.4em; /* equiv 14px */
+	font-size: 1.3em; /* font-size: 1.4em; /* equiv 14px */
 	line-height: 1.5; /* adapt to your design */
 }
 
@@ -126,12 +126,19 @@ textarea, table, td, th, code, pre, samp, div, p {
 }
 
 
-/* switching box model for all elements */
+/* switching box model for all elements except img */
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+img {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
 
 /* Polices de caracteres */
 h1, h2, h3, #nom_site_spip {font-family: 'Lobster', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;}
@@ -201,7 +208,7 @@ body {margin: 0; padding: 0; text-align: justify;}
 #side {display: table-cell; width: 250px; padding: 0 10px;}
 #pied, #retour_haut {width: 1025px; margin: 10px 10px 0 25px;}
 
-@media (min-width: 950px) and (max-width: 1250px) {
+@media only screen and  (min-width: 950px) and (max-width: 1250px) {
 	#header {width: 200px;}
 	#side {width: 200px;}
 	#content {margin-left: 200px;}
@@ -210,14 +217,14 @@ body {margin: 0; padding: 0; text-align: justify;}
 	#pied, #retour_haut {width: auto;}
 }
 
-@media (max-width: 950px) {
+@media only screen and  (max-width: 950px) {
 	#header {position: relative; width:100%;}
 	#content {margin-left: 0; width:100%;}
 	#contenu {padding: 0 10px}
 	#pied, #retour_haut {width: 100%; margin: 10px 0 0 0;}
 }
 
-@media (max-width: 750px) {
+@media only screen and  (max-width: 750px) {
 	#contenu {display: block; width: 100%;}
 	#side {display: block; width: 100%;}
 }
@@ -238,11 +245,11 @@ a:hover {text-decoration: underline;}
 #formulaire_menu_lang label {color: #FFF; font-weight: normal;}
 #formulaire_menu_lang select {height: auto; width: 100%; color: #888;} 
 
-@media (max-width: 950px) {
+@media only screen and  (max-width: 950px) {
 	#entete img {float: left; max-height: 100px; width: auto; max-width: none;}
 	#barrenav {clear: both;}
 }
-@media (max-width: 550px) {
+@media only screen and  (max-width: 550px) {
 	#entete img {float: none; max-width: 100px; height: auto; max-height: none;}
 	.contenu-principal .cartouche .spip_logos {max-width: 25%;}
 }
@@ -312,7 +319,7 @@ a:hover {text-decoration: underline;}
 #label-toggle-barrenav, #toggle-barrenav {cursor: pointer;}
 #label-toggle-barrenav + #toggle-barrenav { display: none; }
 
-@media (min-width: 750px) {
+@media only screen and  (min-width: 750px) {
 	.sf-sub-indicator {float: right; font-size: 1.5em;}
 	#barrenav div.menu-conteneur > ul.sf-js-enabled li ul a,
 	#barrenav div.menu-conteneur > ul.sf-js-enabled li ul ul a,
@@ -355,7 +362,7 @@ a:hover {text-decoration: underline;}
 	.sf-hidden {display: none; visibility: hidden;}
 }
 
-@media (min-width: 950px) and (max-width: 1250px) {
+@media only screen and  (min-width: 950px) and (max-width: 1250px) {
 	#barrenav .sf-js-enabled ul, #barrenav .sf-js-enabled li {
   		width: 177px;
 	}
@@ -365,7 +372,7 @@ a:hover {text-decoration: underline;}
 	}
 }
 
-@media (min-width: 750px) and (max-width: 950px) {
+@media only screen and  (min-width: 750px) and (max-width: 950px) {
 	#formulaire_menu_lang {text-align: right; padding: 0 10px;}
 	#formulaire_menu_lang label {display: inline;}
 	#formulaire_menu_lang select {display: inline-block; width: 180px;}
@@ -426,7 +433,7 @@ a:hover {text-decoration: underline;}
 	}
 }
 
-@media (max-width: 750px) {
+@media only screen and  (max-width: 750px) {
 	.sf-sub-indicator {display: none;}
 	#barrenav ul, #barrenav li  {display: block;}
 	#label-toggle-barrenav {
@@ -488,10 +495,12 @@ table.spip th, table.spip td { padding: 0.20em 0.40em; text-align: left; }
 table.spip th { vertical-align: bottom; font-weight: bold; }
 table.spip td { vertical-align: top; }
 
-/* Portfolio */
+/* Portfolio et documents joints */
 .documents_portfolio {text-align: left;}
 .documents_portfolio .spip_logos {float: none; margin: 0; margin-right: 5px;}
 .documents_portfolio a:hover {text-decoration: none;}
+
+.documents_joints .spip_logos {float: left; padding: 0; margin: 0 10px 0 0; border: none;}
 
 /* Listes */
 
@@ -535,11 +544,11 @@ li.fieldset {padding: 10px; border: dotted 2px #BBB;}
 
 /* Forum */
 ul.comments-ul {list-style: none; padding:0; margin: 0;}
-div.comments > ul.forum > li {border: solid 1px #BBB; margin-bottom: 10px}
+div.comments > ul.forum > li {border: solid 1px #BBB; margin-bottom: 25px}
 div.comments > ul.forum > li li {border-top: solid 1px #BBB;}
 div.comments > ul.forum > li .formulaire_spip li {border-top: none;}
 div.comments > ul.forum > li .previsu li {border: none;}
-ul.forum .spip_logos {float: none; padding: 1px; }
+ul.forum .spip_logos {float: none; padding: 1px; border:none;}
 .comment-meta {display: table-cell; width: 25%; background-color: #DDD; padding: 10px; text-align: center;}
 .comment-meta .permalink {float: left; color: #666;}
 .comment-meta .in-reply-to {display: none;}
