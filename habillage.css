@@ -205,15 +205,15 @@ body {margin: 0; padding: 0; text-align: justify;}
 }
 #content {margin-left:250px;}
 #contenu {display: table-cell; padding: 0 75px 0 25px; width: 800px;}
-#side {display: table-cell; width: 250px; padding: 0 10px;}
+#side {display: table-cell; width: 250px; padding: 0 25px 0 10px;}
 #pied, #retour_haut {width: 1025px; margin: 10px 10px 0 25px;}
 
-@media only screen and  (min-width: 950px) and (max-width: 1250px) {
+@media only screen and  (min-width: 950px) and (max-width: 1350px) {
 	#header {width: 200px;}
 	#side {width: 200px;}
 	#content {margin-left: 200px;}
 	#contenu {width: 75%; padding: 0 25px;}
-	#side {width:25%;}
+	#side {width:25%; padding: 0 10px;}
 	#pied, #retour_haut {width: auto;}
 }
 
@@ -362,7 +362,7 @@ a:hover {text-decoration: underline;}
 	.sf-hidden {display: none; visibility: hidden;}
 }
 
-@media only screen and  (min-width: 950px) and (max-width: 1250px) {
+@media only screen and  (min-width: 950px) and (max-width: 1350px) {
 	#barrenav .sf-js-enabled ul, #barrenav .sf-js-enabled li {
   		width: 177px;
 	}
@@ -479,7 +479,7 @@ a[hreflang].spip_out:after{content: " ("attr(hreflang)")"url(img/external_link.g
 .spip_cadre {width: 100%; border: solid 4px #BBB; background-color: #EEE; padding: 5px;}
 .spip_cadre:hover {color:#666;}
 blockquote, blockquote.spip {
-	margin-left: 30px; margin-right: 15px; padding: 15px;
+	margin-left: 30px; padding: 15px;
 	border-left-style: solid;
 	border-left-width: 5px;
 	background-color: #EEE;
