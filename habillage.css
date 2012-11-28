@@ -147,18 +147,23 @@ code, .spip_code, .spip_cadre, kbd, samp, var
 	{font-family: "Source Code Pro", "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;}
 
 /* Couleurs */
-#header, #content .formulaire_spip input.submit, #content .modererforum button.submit, .comment:hover > .modererforum
+#header, #content .formulaire_spip input.submit, #content .modererforum button.submit, .comment:hover > .modererforum,
+#content .calendriermini .ui-state-highlight a
 	{background-color: #36a786;} 
 h1, .h1, a, p.soustitre, a.spip_in, a.spip_out, a.spip_url, a.spip_glossaire,
 code, .spip_code, .spip_cadre, kbd, samp, var, .formulaire_spip fieldset.previsu legend
 	{color: #36a786;}
-#barrenav li, blockquote, blockquote.spip, #content .formulaire_spip input.submit, #content .modererforum button.submit, .formulaire_spip fieldset.previsu
-	{border-top-color: #36a786; border-bottom-color: #36a786; 
-	border-left-color: #36a786; border-right-color: #36a786;}
+#barrenav li, blockquote, blockquote.spip, #content .formulaire_spip input.submit, 
+#content .modererforum button.submit, .formulaire_spip fieldset.previsu, 
+#content .calendriermini .ui-state-highlight a, #content .ui-state-highlight, 
+#content .ui-widget-content .ui-state-highlight, #content .ui-widget-header .ui-state-highlight
+	{border-color: #36a786;}
 table.spip th, table.spip td {border: 1px solid #36a786;}
 
 #barrenav li:hover, li.sfHover, table.spip tr.row_first, #content p.pagination a:hover,
-#content p.pagination strong, #content .formulaire_spip input.submit:hover, #content .modererforum button.submit:hover, .me > .comment > .comment-content
+#content p.pagination strong, #content .formulaire_spip input.submit:hover,
+#content .modererforum button.submit:hover, .me > .comment > .comment-content,
+#content .calendriermini .ui-state-highlight a:hover
 	{background-color: #b4ded2;}
 
 .info-publi {color: #A98D76;}
@@ -453,8 +458,11 @@ a:hover {text-decoration: underline;}
 h1, .h1 {font-size: 4em; font-weight: normal; margin: 10px 0; text-align: left; line-height: 110%;}
 h2, .h2 {font-weight: normal; text-align: left;}
 h3, .h3 {font-size: 1.5em; font-weight: normal; text-align: left;}
+#side li.item h3; #side li.item .h3 {font-size: 1.25em;}
 
-img.spip_logos {float: right; background-color: white; padding: 10px; border: solid 1px #BBB; margin-left: 10px;}
+img.spip_logos {float: right; background-color: white; padding: 10px; border: solid 1px #DDD; margin-left: 10px;}
+.contenu-principal img.spip_logos {padding: 0; border: none; margin-left: 25px;}
+.contenu-principal > div {clear: both;}
 
 p#hierarchie {margin: 10px 0; color: #BBB;}
 p#hierarchie a {color: #BBB;}
@@ -465,6 +473,8 @@ p.soustitre {margin: 10px 0; font-style: italic; font-size: 1.15em; text-align: 
 .chapo p, .ps p, #descriptif_site_spip {font-weight: bold; color: #666;}
 .notes div {padding-left: 30px;  text-align: justify;}
 .notes .spip_note_ref {float: left; margin-left: -30px;}
+
+.hyperlien {border: solid 1px #DDD; background-color: #EEE; padding: 5px;}
 
 /* Spip Styles */
 
@@ -505,13 +515,13 @@ table.spip td { vertical-align: top; }
 /* Listes */
 
 #content ul.liste-items {list-style-type: none; padding:0; text-align: left;}
-#content li.item {padding: 5px 0;}
+#content li.item {padding: 5px 0; clear: both;}
 #content ul.liste-noisettes li.noisette {padding-left: 30px;} /* Pour le noizetier, voir=noisettes */
 #content li.item h3 {margin-bottom: 5px; padding-top: 10px; margin-top: 10px; border-top: #EEE solid 1px; line-height: 1.5em;}
 #content li.item:first-child h3 {border-top: none; margin-top: 0; padding-top: 10px;}
 #content li.item .info-publi {font-size: 90%; margin-bottom: 10px;}
 #content li.item .entry-content {text-align: justify;}
-#content li.item .meta-publi {font-size: 90%;}
+#content li.item .meta-publi {font-size: 90%; margin-top: 10px;}
 #content li.item .meta-publi .sep {color: #DDD; padding: 0 10px; font-size: 200%;}
 #content p.pagination {text-align: right; margin: 0;}
 #content p.pagination .sep {display: none;}
@@ -560,6 +570,10 @@ p.comment-reply {text-align: right; margin-top: 20px;}
 .comment:hover > .modererforum {display: block; text-align: left; padding-left: 25%; text-align: right;}
 .modererforum form {display: inline-block;}
 .modererforum form button {margin-left: 10px;}
+
+/* Mini-calendrier */
+
+
 
 /* Pied de page */
 
