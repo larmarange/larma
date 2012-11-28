@@ -458,7 +458,7 @@ a:hover {text-decoration: underline;}
 h1, .h1 {font-size: 4em; font-weight: normal; margin: 10px 0; text-align: left; line-height: 110%;}
 h2, .h2 {font-weight: normal; text-align: left;}
 h3, .h3 {font-size: 1.5em; font-weight: normal; text-align: left;}
-#side li.item h3; #side li.item .h3 {font-size: 1.25em;}
+#side li.item h3, #side li.item .h3 {font-size: 1.25em;}
 
 img.spip_logos {float: right; background-color: white; padding: 10px; border: solid 1px #DDD; margin-left: 10px;}
 .contenu-principal img.spip_logos {padding: 0; border: none; margin-left: 25px;}
