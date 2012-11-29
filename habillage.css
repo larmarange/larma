@@ -141,7 +141,8 @@ img {
 
 
 /* Polices de caracteres */
-h1, h2, h3, #nom_site_spip {font-family: 'Lobster', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;}
+h1, h2, h3, #nom_site_spip, .page_biblio #contenu h4.h4
+	{font-family: 'Lobster', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;}
 body, li.item h3 {font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;}
 code, .spip_code, .spip_cadre, kbd, samp, var
 	{font-family: "Source Code Pro", "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;}
