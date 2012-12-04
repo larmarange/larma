@@ -285,7 +285,7 @@ a:hover {text-decoration: underline;}
 }
 
 #barrenav ul {list-style: none; padding: 10px; margin: 0;}
-#barrenav ul li {margin: 0; padding:0; background-color: #FFF;}
+#barrenav ul li {margin: 0; padding:0; background-color: #FFF;  text-align: left;}
 #barrenav div.menu-conteneur > ul.menu-liste > li {
 	border-top-style: solid; border-top-width: 1px;
 	border-left-style: solid; border-left-width: 1px;
