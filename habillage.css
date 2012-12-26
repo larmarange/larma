@@ -553,6 +553,23 @@ table.spip td { vertical-align: top; }
 li.fieldset {padding: 10px; border: dotted 2px #BBB;}
 
 
+p.reponse_formulaire_ok, p.reponse_formulaire_erreur {
+	border:2px solid;
+	font-weight:normal;
+	padding:5px;
+	padding-left:40px;
+	min-height:24px;
+	margin-bottom:5px;
+}
+p.reponse_formulaire_ok {
+	border-color:#53AD20;
+	color:#53AD20;
+}
+p.reponse_formulaire_erreur {
+	border-color:#C30;
+	color: #C30;
+}
+
 /* Forum */
 ul.comments-ul {list-style: none; padding:0; margin: 0;}
 div.comments > ul.forum > li {border: solid 1px #BBB; margin-bottom: 25px}
