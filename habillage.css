@@ -550,8 +550,8 @@ table.spip td { vertical-align: top; }
 #content .formulaire_spip textarea  {width: 100%;}
 #content .formulaire_spip {margin-bottom: 20px;}
 .formulaire_login .spip_logos {padding: 0;}
-li.fieldset {padding: 10px; border: dotted 2px #BBB;}
-
+li.fieldset, .formulaire_spip ul li.fieldset {padding: 10px; border: dotted 2px #BBB; margin: 10px 0;}
+.formulaire_spip h3, .formulaire_spip .h3 {margin: 5px 0;}
 
 p.reponse_formulaire_ok, p.reponse_formulaire_erreur {
 	border:2px solid;
@@ -569,6 +569,8 @@ p.reponse_formulaire_erreur {
 	border-color:#C30;
 	color: #C30;
 }
+
+.formulaire_spip li.erreur input.text, .formulaire_spip li.erreur textarea, .formulaire_spip li.erreur select { background-color: #FCC; border-style: solid; border-color: #C30; }
 
 /* Forum */
 ul.comments-ul {list-style: none; padding:0; margin: 0;}
